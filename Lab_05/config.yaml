@@ -1,0 +1,17 @@
+schema_version: 1
+input:
+  path: data/books.csv
+  format: auto
+output:
+  path: output/books.json
+  format: auto
+  summary: output/summary.json
+processing:
+  min_year: 1800
+  max_year: 2026
+  skip_invalid: true
+logging:
+  level: INFO
+  path: logs/application.log
+  max_bytes: 1000000
+  backups: 2

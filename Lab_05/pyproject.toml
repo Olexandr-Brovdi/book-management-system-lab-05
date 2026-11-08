@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reliable-book-importer"
+version = "0.5.0"
+description = "Lab 5 variant 2: reliable book import export configuration"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0"]
+authors = [{name = "Бровді Олександр"}]
+
+[project.optional-dependencies]
+report = ["python-docx>=1.1", "Pillow>=10"]
+
+[project.scripts]
+book-io = "book_io.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
