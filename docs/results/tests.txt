@@ -1,0 +1,26 @@
+test_atomic_injected_failure (test_reliability.ReliabilityTests.test_atomic_injected_failure) ... ok
+test_atomic_replace_failure (test_reliability.ReliabilityTests.test_atomic_replace_failure) ... ok
+test_csv_multiline (test_reliability.ReliabilityTests.test_csv_multiline) ... ok
+test_empty_export (test_reliability.ReliabilityTests.test_empty_export) ... ok
+test_isbn_checks (test_reliability.ReliabilityTests.test_isbn_checks) ... ok
+test_jsonl_roundtrip_and_bad_line (test_reliability.ReliabilityTests.test_jsonl_roundtrip_and_bad_line) ... ok
+test_lazy_open_and_close (test_reliability.ReliabilityTests.test_lazy_open_and_close) ... ok
+test_logging_and_rotation (test_reliability.ReliabilityTests.test_logging_and_rotation) ... ok
+test_missing_bad_yaml_and_missing_section (test_reliability.ReliabilityTests.test_missing_bad_yaml_and_missing_section) ... ok
+test_missing_extra_columns_invalid (test_reliability.ReliabilityTests.test_missing_extra_columns_invalid) ... ok
+test_missing_input_chaining (test_reliability.ReliabilityTests.test_missing_input_chaining) ... ok
+test_path_collision_rejected (test_reliability.ReliabilityTests.test_path_collision_rejected) ... ok
+test_reject_numeric_bool_float (test_reliability.ReliabilityTests.test_reject_numeric_bool_float) ... ok
+test_strict_preserves_old_output (test_reliability.ReliabilityTests.test_strict_preserves_old_output) ... ok
+test_structural_csv_failure (test_reliability.ReliabilityTests.test_structural_csv_failure) ... ok
+test_tolerant_statistics (test_reliability.ReliabilityTests.test_tolerant_statistics) ... ok
+test_validation_fields_and_cause (test_reliability.ReliabilityTests.test_validation_fields_and_cause) ... ok
+test_wrong_header (test_reliability.ReliabilityTests.test_wrong_header) ... ok
+test_yaml_config_and_auto_format (test_reliability.ReliabilityTests.test_yaml_config_and_auto_format) ... ok
+test_yaml_invalid_range (test_reliability.ReliabilityTests.test_yaml_invalid_range) ... ok
+test_yaml_string_false_is_rejected (test_reliability.ReliabilityTests.test_yaml_string_false_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.129s
+
+OK

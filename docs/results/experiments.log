@@ -1,0 +1,52 @@
+2026-11-08 16:41:46,058 | INFO | book_io.resources | Book import/export started
+2026-11-08 16:41:46,084 | WARNING | book_io.services | Invalid record line=1002 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,084 | ERROR | book_io.resources | Book import/export failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\validators.py", line 66, in parse_book
+    numbers[field] = int(value.strip())
+                     ^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'wrong'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\resources.py", line 51, in logged_operation
+    yield
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\services.py", line 60, in process
+    committed = select_exporter(config.output_format).write(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\exporters.py", line 23, in write
+    for book in books:
+                ^^^^^
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\services.py", line 30, in import_books
+    book = parse_book(source, policy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\validators.py", line 70, in parse_book
+    raise RecordValidationError(
+book_io.exceptions.RecordValidationError: Field must be an integer
+2026-11-08 16:41:46,088 | INFO | book_io.resources | Book import/export started
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1002 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1003 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1004 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1005 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1006 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1007 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1008 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1009 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1010 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,104 | WARNING | book_io.services | Invalid record line=1011 field=pages reason=Field must be an integer
+2026-11-08 16:41:46,113 | INFO | book_io.resources | Book import/export finished
+2026-11-08 16:41:46,113 | INFO | book_io.services | Total=1010 valid=1000 invalid=10 exported=1000
+2026-11-08 16:41:46,120 | INFO | book_io.resources | Atomic export failure experiment started
+2026-11-08 16:41:46,121 | ERROR | book_io.resources | Atomic export failure experiment failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\resources.py", line 51, in logged_operation
+    yield
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\experiments.py", line 176, in run_experiments
+    JsonExporter().write(broken_books(), fault_output)
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\exporters.py", line 23, in write
+    for book in books:
+                ^^^^^
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\experiments.py", line 172, in broken_books
+    raise DataExportError("Deliberate export failure after the first record")
+book_io.exceptions.DataExportError: Deliberate export failure after the first record

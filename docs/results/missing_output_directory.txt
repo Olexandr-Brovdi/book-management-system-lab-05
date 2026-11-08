@@ -1,0 +1,13 @@
+{
+  "total": 8,
+  "valid": 4,
+  "invalid": 4,
+  "exported": 4
+}
+2026-11-08 16:41:57,381 | INFO | book_io.resources | Book import/export started
+2026-11-08 16:41:57,393 | WARNING | book_io.services | Invalid record line=6 field=pages reason=Field must be an integer
+2026-11-08 16:41:57,393 | WARNING | book_io.services | Invalid record line=7 field=isbn reason=ISBN length or check digit is invalid
+2026-11-08 16:41:57,394 | WARNING | book_io.services | Invalid record line=8 field=title reason=Required text is empty
+2026-11-08 16:41:57,394 | WARNING | book_io.services | Invalid record line=9 field=year reason=Year is outside the configured range
+2026-11-08 16:41:57,406 | INFO | book_io.resources | Book import/export finished
+2026-11-08 16:41:57,407 | INFO | book_io.services | Total=8 valid=4 invalid=4 exported=4

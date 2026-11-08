@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\validators.py", line 66, in parse_book
+    numbers[field] = int(value.strip())
+                     ^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'wrong'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\experiments.py", line 160, in run_experiments
+    parse_book(SourceRow(2, row), base.processing)
+  File "C:\Users\Admin\Documents\Codex\2026-11-07\https-github-com-dioden5-student-grading\outputs\book-management-system-lab-05\src\book_io\validators.py", line 70, in parse_book
+    raise RecordValidationError(
+book_io.exceptions.RecordValidationError: Field must be an integer

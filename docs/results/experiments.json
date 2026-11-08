@@ -1,0 +1,102 @@
+{
+  "policies": [
+    {
+      "mode": "strict",
+      "total": 1001,
+      "valid": 1000,
+      "invalid": 1,
+      "exported": 0,
+      "status": "controlled abort",
+      "previous_preserved": true
+    },
+    {
+      "mode": "tolerant",
+      "total": 1010,
+      "valid": 1000,
+      "invalid": 10,
+      "exported": 1000,
+      "status": "success",
+      "previous_preserved": false
+    }
+  ],
+  "benchmark": [
+    {
+      "records": 10000,
+      "eager": {
+        "count": 10000,
+        "seconds": 0.06206529994960874,
+        "peak_bytes": 4888808
+      },
+      "streaming": {
+        "count": 10000,
+        "seconds": 0.05442409997340292,
+        "peak_bytes": 74699
+      }
+    },
+    {
+      "records": 100000,
+      "eager": {
+        "count": 100000,
+        "seconds": 0.5933021999662742,
+        "peak_bytes": 48712722
+      },
+      "streaming": {
+        "count": 100000,
+        "seconds": 0.5450611999258399,
+        "peak_bytes": 74671
+      }
+    },
+    {
+      "records": 500000,
+      "eager": {
+        "count": 500000,
+        "seconds": 2.9941454000072554,
+        "peak_bytes": 244470812
+      },
+      "streaming": {
+        "count": 500000,
+        "seconds": 2.6927206000545993,
+        "peak_bytes": 74635
+      }
+    }
+  ],
+  "atomic": {
+    "exception": "DataExportError",
+    "controlled": true,
+    "previous_preserved": true,
+    "temporary_files": 0
+  },
+  "configuration": [
+    {
+      "case": "missing_config",
+      "exit_code": 1,
+      "output_exists": false
+    },
+    {
+      "case": "malformed_yaml",
+      "exit_code": 1,
+      "output_exists": false
+    },
+    {
+      "case": "missing_input_key",
+      "exit_code": 1,
+      "output_exists": false
+    },
+    {
+      "case": "invalid_year_range",
+      "exit_code": 1,
+      "output_exists": false
+    },
+    {
+      "case": "missing_input_file",
+      "exit_code": 1,
+      "output_exists": false
+    },
+    {
+      "case": "missing_output_directory",
+      "exit_code": 0,
+      "output_exists": true
+    }
+  ],
+  "method": "single run under tracemalloc; Python allocations, not RSS; generation excluded"
+}
